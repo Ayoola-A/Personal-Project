@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<title>My Portfolio</title>
+</head>
+<body>
+
+<header>
+  <h3>Assignment</h3>
+  <button id="themeBtn">Dark Mode</button>
+</header>
+
+<section id="about" class="hero">
+  <h1>Hi, I'm Ayedun Ayoola</h1>
+  <p>A passionate Web Developer learning at CWW Tech Africa. I build simple and clean websites with HTML, CSS and JavaScript.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="cards">
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <h3>Personal Portfolio Website</h3>
+    <p>A one-page portfolio with light/dark mode.</p>
+  </div>
+  <div class="project">
+    <h3>Simple Calculator</h3>
+    <p>A basic calculator made with simple JavaScript.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<script>
+  const btn = document.getElementById('themeBtn');
+  btn.addEventListener('click', function() {
+    document.body.classList.toggle('dark');
+    if (document.body.classList.contains('dark')) {
+      btn.textContent = 'Light Mode';
+    } else {
+      btn.textContent = 'Dark Mode';
+    }
+  });
+</script>
+
+</body>
+</html>
